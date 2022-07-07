@@ -1,0 +1,11 @@
+{% extends "adoption/layout.html" %}
+
+{% block content %}
+<ul id="dogs-container">
+  {% for dog in doggos %}
+  <li>
+    <a href="{% url 'adoption-show' id=dog.id %}">{{ dog.name }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}
